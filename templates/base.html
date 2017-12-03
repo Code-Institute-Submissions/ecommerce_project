@@ -1,0 +1,317 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BEST BARGAIN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    {% block head_js %}
+    {% endblock head_js %}
+</head>
+<body>
+       <div class="container-fluid bb-nav-container">
+        <nav class="navbar bb-navbar navbar-fixed-top">
+            <div class="navbar-header">
+    	        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+	        	</button>
+		        <a class="navbar-brand" href="{% url 'index' %}">BEST BARGAIN</a>
+	        </div>
+	
+	<div class="collapse navbar-collapse js-navbar-collapse">
+		<ul class="nav navbar-nav">
+			
+		<li>
+			<form class="navbar-form bb-navbar-search-form" role="search">
+				<div class="input-group bb-input-group">
+						<input  type="text" class="form-control" placeholder="Search" name="q">
+					<div class="input-group-btn">
+						<button class="btn bb-search-btn" type="submit"><i class="fa fa-search"></i></button>
+					</div>
+				</div>
+			</form>    
+		</li>
+		
+			<li class="dropdown mega-dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">MEN </a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					<li class="col-sm-12">
+						<ul>
+							<li class="dropdown-header text-center"><a href="{% url 'viewproducts' %}">VIEW ALL MENS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+                            <li class="divider text-center"></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">FOOTWEAR</li>
+							<li><a href="#">Trainers</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Boots</a></li>
+							<li><a href="#">Runners</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">CLOTHES</li>
+							<li><a href="#">Tops</a></li>
+							<li><a href="#">Jeans</a></li>
+							<li><a href="#">T-Shirts</a></li>                            
+							<li><a href="#">Hoodies</a></li>							
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">ACCESSORIES</li>
+                            <li><a href="#">Belts</a></li>
+							<li><a href="#">Hats</a></li>
+							<li><a href="#">Bags</a></li>
+							<li><a href="#">Glasses</a></li>                         
+						</ul>
+					</li>
+						<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">SPORTSWEAR</li>
+                            <li><a href="#">Football</a></li>
+							<li><a href="#">Basketball</a></li>
+							<li><a href="#">Tennis</a></li>
+							<li><a href="#">Running</a></li>                         
+						</ul>
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="dropdown mega-dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">WOMEN </a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					<li class="col-sm-12">
+						<ul>
+							<li class="dropdown-header text-center"><a href="#">VIEW ALL WOMENS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+                            <li class="divider text-center"></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">FOOTWEAR</li>
+							<li><a href="#">Trainers</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Boots</a></li>
+							<li><a href="#">Runners</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">CLOTHES</li>
+							<li><a href="#">Tops</a></li>
+							<li><a href="#">Jeans</a></li>
+							<li><a href="#">T-Shirts</a></li>                            
+							<li><a href="#">Hoodies</a></li>							
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">ACCESSORIES</li>
+                            <li><a href="#">Belts</a></li>
+							<li><a href="#">Hats</a></li>
+							<li><a href="#">Bags</a></li>
+							<li><a href="#">Glasses</a></li>                         
+						</ul>
+					</li>
+						<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">SPORTSWEAR</li>
+                            <li><a href="#">Football</a></li>
+							<li><a href="#">Basketball</a></li>
+							<li><a href="#">Tennis</a></li>
+							<li><a href="#">Running</a></li>                         
+						</ul>
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="dropdown mega-dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">BOYS </a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					<li class="col-sm-12">
+						<ul>
+							<li class="dropdown-header text-center"><a href="#">VIEW ALL BOYS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+                            <li class="divider text-center"></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">FOOTWEAR</li>
+							<li><a href="#">Trainers</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Boots</a></li>
+							<li><a href="#">Runners</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">CLOTHES</li>
+							<li><a href="#">Tops</a></li>
+							<li><a href="#">Jeans</a></li>
+							<li><a href="#">T-Shirts</a></li>                            
+							<li><a href="#">Hoodies</a></li>							
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">ACCESSORIES</li>
+                            <li><a href="#">Belts</a></li>
+							<li><a href="#">Hats</a></li>
+							<li><a href="#">Bags</a></li>
+							<li><a href="#">Glasses</a></li>                         
+						</ul>
+					</li>
+						<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">SPORTSWEAR</li>
+                            <li><a href="#">Football</a></li>
+							<li><a href="#">Basketball</a></li>
+							<li><a href="#">Tennis</a></li>
+							<li><a href="#">Running</a></li>                         
+						</ul>
+					</li>
+				</ul>				
+			</li>
+			
+			<li class="dropdown mega-dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">GIRLS </a>				
+				<ul class="dropdown-menu mega-dropdown-menu">
+					<li class="col-sm-12">
+						<ul>
+							<li class="dropdown-header text-center"><a href="#">VIEW ALL GIRLS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+                            <li class="divider text-center"></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">FOOTWEAR</li>
+							<li><a href="#">Trainers</a></li>
+                            <li><a href="#">Shoes</a></li>
+                            <li><a href="#">Boots</a></li>
+							<li><a href="#">Runners</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">CLOTHES</li>
+							<li><a href="#">Tops</a></li>
+							<li><a href="#">Jeans</a></li>
+							<li><a href="#">T-Shirts</a></li>                            
+							<li><a href="#">Hoodies</a></li>							
+						</ul>
+					</li>
+					<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">ACCESSORIES</li>
+                            <li><a href="#">Belts</a></li>
+							<li><a href="#">Hats</a></li>
+							<li><a href="#">Bags</a></li>
+							<li><a href="#">Glasses</a></li>                         
+						</ul>
+					</li>
+						<li class="col-sm-3">
+						<ul>
+							<li class="dropdown-header">SPORTSWEAR</li>
+                            <li><a href="#">Football</a></li>
+							<li><a href="#">Basketball</a></li>
+							<li><a href="#">Tennis</a></li>
+							<li><a href="#">Running</a></li>                         
+						</ul>
+					</li>
+				</ul>				
+			</li>
+			
+				</ul>				
+			</li>
+			
+
+		</ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"  data-toggle="dropdown" role="button" aria-expanded="false">ACCOUNT <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="bb-account-dropdown" role="menu">
+            {% if user.is_authenticated %}
+                        <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i> Viewed</a></li>
+                    {%  else %}
+                        <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
+                        <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
+                    {% endif %}
+                    	
+          </ul>
+        </li>
+        
+      </ul>
+	</div>
+  </nav>
+</div>
+        {% block content %} {% endblock %}
+    
+
+<footer class="bb-footer">
+    <div>
+        <div class="container-fluid bb-footer-social">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <h4 id="bb-social-network-text">Connect with us on social networks!</h4>
+                </div>
+                <div class="col-md-6 bb-footer-social-icons">
+                    <a class="bb-social-icons"><i class="fa fa-facebook"></i></a>
+                    <a class="bb-social-icons"><i class="fa fa-twitter"></i></a>
+                    <a class="bb-social-icons"><i class="fa fa-google-plus"></i></a>
+                    <a class="bb-social-icons"><i class="fa fa-linkedin"></i></a>
+                    <a class="bb-social-icons"><i class="fa fa-instagram"> </i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bb-footer-main-container">
+        <div class="row">
+        	 <div class="col-sm-4 text-center bb-footer-column">
+                <h6 class="bb-footer-title">USEFUL LINKS</h6>
+                <hr>
+                <p><a href="#!">BLOG</a></p>
+                <p><a href="#!">HELP</a></p>
+                <p><a href="#!">PRODUCTS</a></p>
+                <p><a href="#!">NEWSLETTER</a></p>
+            </div>
+            <div class="col-sm-4 text-center bb-footer-column">
+                <h6 class="bb-footer-title">ABOUT US</h6>
+                <hr>
+                <p><a></a>Find out how Best Bargain began and some of the interesting aspects of the company that you might not know!</a></p>
+            </div>
+            <div class="col-sm-4 text-center bb-footer-column">
+                <h6 class="bb-footer-title">CONTACT</h6>
+                <hr>
+                <p><i class="fa fa-home"></i> IRELAND</p>
+                <p><i class="fa fa-envelope"></i> contact@bestbargain.ie</p>
+                <p><i class="fa fa-phone"></i> + 01 777 7777</p>
+                <p><i class="fa fa-print"></i> + 01 777 7777</p>
+            </div>
+        </div>
+    </div>
+    <div class="bb-footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="#"><strong> BEST BARGAIN</strong></a>
+        </div>
+    </div>
+</footer>
+                
+            
+</body>
+</html>

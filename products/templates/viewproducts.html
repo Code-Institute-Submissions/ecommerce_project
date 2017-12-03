@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    
+</div>
+
+<div class="container">
+<div class="row">
+    {% for product in products %}
+    <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="card text-center">
+            <div class="bb-product-img-container">
+                <img class="card-img-top" src="{{ MEDIA_URL }}{{ product.image }}">
+            </div>
+            <div class="card-block">
+                <h5 class="text-bold">{{ product.name }}</h5>
+                <p>{{ product.description }}</p>
+                <p>€{{ product.price }}</p>
+            </div>
+        </div>
+    </div>
+     {% endfor %}
+ </div>
+</div>
+           
+           
+
+        
+           
+               
+        
+{% endblock %}
+
+
+
+
+<div class="row">
+                {% for product in products %}
+                 <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{{ MEDIA_URL }}{{ product.image }}" alt="Generic placeholder image" width="140" height="140">
+          <h2>{{ product.name }}</h2>
+          <p>{{ product.description }}</p>
+           <h4>{{ product.price }}</h4>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+                {% endfor %}
+                
+                     
+                                <!--<form method="post" action="#">-->
+                                <!--    {% csrf_token %}-->
+                                <!--    <button type="submit">ADD</button>-->
+                                <!--</form>-->
+                                
