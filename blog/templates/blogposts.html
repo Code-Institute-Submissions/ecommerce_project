@@ -6,13 +6,13 @@
     <h1 class="text-center">BEST BARGAIN BLOG</h1>
     <div class="row">
     {% for post in posts %}
-             <div class="col-xs-12 col-sm-6">
+             <div class="col-xs-12 col-md-6">
         <div class="card text-center">
             <div class="bb-product-img-container">
                 <h3 class="text-bold">{{ post.title }}</h3>
                 <img class="card-img-top" src="{{MEDIA_URL}}{{post.image}}">
             </div>
-            <div class="card-block">
+            <div class="card-block bb-blog-block">
                 
                 <p>{{ post.content|truncatewords:30 }}</p>
                 <p><button class="btn bb-form-btn" onclick="location.href='{% url 'viewpost' post.id %}'">Read More</button></p>

@@ -5,7 +5,7 @@
     <div class="container bb-account-container">
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
         <fieldset class="form-group">
-            <legend>Login</legend>
+            <legend>LOGIN</legend>
             
             {% if next %}
                 <p>No account? <a href="{% url 'register' %}?next={{ next }}"><span style="color:#2fa4e7;">Sign up </span> </a> now.</p>

@@ -12,9 +12,9 @@
                 {% endif %}
                 <p>{{ post.published_date }} | <strong>Views</strong> {{ post.views }} | <strong>Tag</strong> {{ post.tag }}</p>
             </div>
-            <div class="card-block">
+            <div >
                 <p>{{ post.content }}</p>
-                <button class="btn btn-default" onclick="location.href='{% url 'getposts'%}'">Back To Blog</button>
+                <button class="btn bb-form-btn" onclick="location.href='{% url 'getposts'%}'">BACK TO BLOG</button>
             </div>
         </div>
       </div>

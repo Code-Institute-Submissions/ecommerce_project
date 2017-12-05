@@ -5,7 +5,7 @@
  <form method="POST" action="{% url 'addcomment' post.id %}">
         {% csrf_token %}
         {{ form | as_bootstrap }}
-        <button type="submit">Add</button>
+        <button class="btn bb-form-btn" type="submit">ADD</button>
   </form>
 
 {% for comment in comments %}
