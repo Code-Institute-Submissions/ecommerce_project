@@ -33,7 +33,7 @@
 		<ul class="nav navbar-nav">
 			
 		<li>
-			<form class="navbar-form bb-navbar-search-form" role="search">
+			<form class="navbar-form bb-navbar-search-form" role="search" action="{% url 'search' %}" method="get">
 				<div class="input-group bb-input-group">
 						<input  type="text" class="form-control" placeholder="Search" name="q">
 					<div class="input-group-btn">
@@ -245,9 +245,9 @@
           <a href="#" class="dropdown-toggle"  data-toggle="dropdown" role="button" aria-expanded="false">ACCOUNT <span class="caret"></span></a>
           <ul class="dropdown-menu" id="bb-account-dropdown" role="menu">
             {% if user.is_authenticated %}
-                        <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i> Profile</a></li>
+                        <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i>  Profile</a></li>
                         <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Log Out</a></li>
-                        <li><a href="#"><i class="fa fa-star" aria-hidden="true"></i> Viewed</a></li>
+                        <li><a href="{% url 'viewed' %}"><i class="fa fa-star" aria-hidden="true"></i> Viewed</a></li>
                     {%  else %}
                         <li><a href="{% url 'register' %}"><i class="fa fa-user-plus"></i> Register</a></li>
                         <li><a href="{% url 'login' %}"><i class="fa fa-sign-in"></i> Log In</a></li>
@@ -285,7 +285,7 @@
         	 <div class="col-sm-4 text-center bb-footer-column">
                 <h6 class="bb-footer-title">USEFUL LINKS</h6>
                 <hr>
-                <p><a href="#!">BLOG</a></p>
+                <p><a href="{% url 'getposts' %}">BLOG</a></p>
                 <p><a href="#!">HELP</a></p>
                 <p><a href="#!">PRODUCTS</a></p>
                 <p><a href="#!">NEWSLETTER</a></p>
@@ -307,7 +307,7 @@
     </div>
     <div class="bb-footer-copyright">
         <div class="container-fluid">
-            © 2017 Copyright: <a href="#"><strong> BEST BARGAIN</strong></a>
+            © 2017 Copyright: <strong style="color:#003542;"> BEST BARGAIN</strong>
         </div>
     </div>
 </footer>
