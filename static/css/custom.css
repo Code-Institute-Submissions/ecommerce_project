@@ -9,6 +9,17 @@ body {
   margin-top: 50px;
 }
 
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Montserrat",Helvetica,Arial,sans-serif;
+    color: #003542;
+}
+
+h3 {
+  color: #2fa4e7;
+}
+
 a {
   color: #003542;
 }
@@ -259,6 +270,7 @@ a:hover, a:focus {
 .bb-page-title {
   background-color:#2fa4e7;
   color:white;
+  font-size: 22px;
 }
 
 
@@ -300,7 +312,7 @@ a:hover, a:focus {
 .card-img-top {
     display: block;
     width: auto;
-    height: 200px;
+    height: 180px;
     margin: 0 auto;
 }
 
@@ -412,9 +424,14 @@ a:hover, a:focus {
     padding-right: 15px;
 }
 
+#bb-account-tab {
+  border-bottom: none;
+}
+
 #bb-account-dropdown {
     width: 118px;
     min-width: 0px;
+    border: none;
 }
 
 .bb-navbar-search-form {
@@ -514,6 +531,12 @@ a:hover, a:focus {
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+
+.bb-page-title {
+  background-color:#2fa4e7;
+  color:white;
+  font-size: 28px;
 }
 
 /**********************************BLOG************************************/

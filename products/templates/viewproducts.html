@@ -4,16 +4,17 @@
 <div class="container-fluid bb-products-container">
 <div class="row">
     {% for product in products %}
-    <div class="col-xs-12 col-sm-4 col-md-3">
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <a href="{{ product.aw_deep_link }}">
         <div class="card text-center">
             <div class="bb-product-img-container">
-                <img class="card-img-top" src="{{ MEDIA_URL }}{{ product.image }}">
+                <img class="card-img-top" src="{{ product.aw_image_url }}">
             </div>
             <div class="card-block">
-                <h5 class="text-bold">{{ product.name }}</h5>
-                <p>{{ product.description }}</p>
-                <p style="color:#EB474E;">€{{ product.price }}</p>
+                <h5 class="text-bold">{{ product.product_name }}</h5>
+                <p style="color:#EB474E;">€{{ product.search_price }}</p>
             </div>
+        </a>  
         </div>
     </div>
      {% endfor %}
