@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from .models import Product
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Product, Category
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def viewproducts(request):
@@ -21,8 +21,22 @@ def do_search(request):
 def get_index(request):
     return render(request, 'index.html')
     
+def show_category(request,hierarchy= None):
+    category_slug = hierarchy.split('/')
+    parent = None
+    root = Category.objects.all()
+
+    for slug in category_slug[:-1]:
+        parent = root.get(parent=parent, slug = slug)
+
+    try:
+        instance = Category.objects.get(parent=parent,slug=category_slug[-1])
+    except:
+        instance = get_object_or_404(Product, slug = category_slug[-1])
+        return render(request, "viewproducts.html", {'instance':instance})
+    else:
+        return render(request, 'categories.html', {'instance':instance})
     
- 
     
 
     

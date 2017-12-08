@@ -38,4 +38,5 @@ urlpatterns = [
     url(r'^viewed/', include(urls_viewed)),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
     
+    
 ]

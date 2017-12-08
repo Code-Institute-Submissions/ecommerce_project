@@ -271,7 +271,6 @@ a:hover, a:focus {
   background-color:#2fa4e7;
   color:white;
   font-size: 22px;
-  margin-top: 40px;
 }
 
 
@@ -315,12 +314,6 @@ a:hover, a:focus {
     width: auto;
     height: 180px;
     margin: 0 auto;
-}
-
-.bb-brand-img {
-    max-width: 150px;
-    height: auto;
-    padding: 25px;
 }
 
 
@@ -379,12 +372,6 @@ a:hover, a:focus {
     border-radius: 0px;
     font-size: 26px;
     transition: .85s;
-}
-
-.bb-brand-img {
-    max-width: 175px;
-    height: auto;
-    padding: 30px;
 }
 
 /**********************************BLOG************************************/
@@ -552,10 +539,6 @@ a:hover, a:focus {
   font-size: 28px;
 }
 
-.bb-brand-img {
-  max-width: 180px;
-}
-
 /**********************************BLOG************************************/
 
 .bb-viewpost-img {
@@ -574,13 +557,6 @@ a:hover, a:focus {
   padding-left: 15px;
 }
 
-/**********************************BASE************************************/
-
-.bb-brand-img {
-    max-width: 240px;
-    padding: 40px;
-}
-
 /**********************************BLOG************************************/
 
 .bb-blog-block {
@@ -590,13 +566,7 @@ a:hover, a:focus {
 
 
 @media (min-width: 1200px) {
-
-/**********************************INDEX************************************/  
-  .bb-brand-img {
-    max-width: 300px;
-    padding: 50px;
-}
-
+  
 }
 
 
