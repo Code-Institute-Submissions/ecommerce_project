@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'blog',
     'viewed',
     'mptt',
+    'storages',
 ]
 
 MIDDLEWARE = [
