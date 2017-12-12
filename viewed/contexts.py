@@ -14,8 +14,8 @@ def viewed_contents(request):
     product_count = 0
     for id, quantity in viewed.items():
         product = get_object_or_404(Product, pk=id)
-        total += quantity * product.search_price
-        product_count += quantity
+        total += 1 * product.search_price
+        product_count += 1
         viewed_items.append({'id': id, 'quantity': quantity, 'product': product})
 
     return { 'viewed_items': viewed_items, 'total': total, 'product_count': product_count }

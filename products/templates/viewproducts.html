@@ -20,7 +20,7 @@
 <div class="row">
     {% for product in products %}
     <div class="col-xs-12 col-sm-6 col-md-3">
-        <a href="{{ product.aw_deep_link }}">
+        <a href="{% url 'selected_product' product.id %}" target="_blank">
         <div class="card text-center">
             <div class="bb-product-img-container">
                 <img class="card-img-top" src="{{ product.aw_image_url }}">

@@ -6,7 +6,7 @@ from django.utils import timezone
 
 # Create your views here.
 def getposts(request):
-   posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+   posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:2]
    return render(request, "blogposts.html", {'posts': posts})
    
     

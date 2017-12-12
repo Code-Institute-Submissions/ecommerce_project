@@ -3,44 +3,28 @@
 {% load bootstrap_tags %}
 
 {% block content %}
+<div class="container bb-view-container">
     <table class="table">
         <thead>
         <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Action</th>
+            <th>IMAGE</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>LINK</th>
         </tr>
         </thead>
         <tbody>
         {% for item in viewed_items %}
             <tr>
-                <td><img height="100" width="100" src="{{ item.product.aw_image_url }}"></td>
-                <td>{{ item.product.product_name }}</td>
-                <td>{{ item.product.description }}</td>
-                <td>{{ item.quantity }}</td>
-                <td>{{ item.product.search_price }}</td>
-                <td>
-                    <form method="post" action="{% url 'adjust_viewed' item.id %}">
-                        {% csrf_token %}
-                        Quantity
-                        <input name='quantity' type="number" min="0" max="999">
-                        <button type="submit">Adjust</button>
-                    </form>
-                </td>
+                
+                    <td><img class="bb-viewed-img" src="{{ item.product.aw_image_url }}"></td>
+                    <td>{{ item.product.product_name }}</td>
+                    <td>{{ item.product.search_price }}</td>
+                    <td><button class="btn bb-form-btn" src="{{ item.product.aw_deep_link }}">VIEW</button></td>
             </tr>
         {% endfor %}
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>Total</td>
-            <td>{{ total }}</td>
-            <td><a href="#" class="btn btn-success" role="button">Checkout</a></td>
-        </tr>
+        
         </tbody>
     </table>
-
+</div>
 {% endblock %}

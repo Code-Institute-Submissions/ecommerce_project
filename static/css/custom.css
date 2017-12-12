@@ -276,6 +276,8 @@ a:hover, a:focus {
 
 
 
+
+
 /**********************************VIEWPRODUCTS************************************/
 
 .bb-products-container {
@@ -364,6 +366,16 @@ a:hover, a:focus {
   height:195px;
 }
 
+/**********************************VIEWED************************************/
+
+.bb-view-container {
+  margin-top: 30px;
+}
+
+.bb-viewed-img {
+  height: 80px;
+  width: auto;
+}
 
 /**********************************INDEX************************************/
 @media (min-width: 576px) { 
@@ -395,6 +407,17 @@ a:hover, a:focus {
 
 .bb-blog-block {
   height:180px;
+}
+
+/**********************************VIEWED************************************/
+
+.bb-view-container {
+  margin-top: 50px;
+}
+
+.bb-viewed-img {
+  height: 130px;
+  width: auto;
 }
 
 }

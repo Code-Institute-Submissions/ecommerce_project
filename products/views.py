@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Product, Category
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from viewed.views import add_to_viewed
+from blog.models import Post
+from django.utils import timezone
 
 def viewproducts(request):
     products = Product.objects.get_queryset().order_by('id')
@@ -19,7 +22,8 @@ def do_search(request):
     return render(request, 'viewproducts.html', {'products': products})
     
 def get_index(request):
-    return render(request, 'index.html')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'index.html', {'posts': posts})
     
 def show_category(request,hierarchy= None):
     category_slug = hierarchy.split('/')
@@ -37,8 +41,16 @@ def show_category(request,hierarchy= None):
     else:
         return render(request, 'categories.html', {'instance':instance})
     
+def selected_product(request, id):
+    product = Product.objects.get(pk=id)
+    link = product.aw_deep_link
+    viewed = request.session.get('viewed', {})
     
+    viewed[id] = viewed.get(id)
+    
+    request.session['viewed'] = viewed   
+    return redirect(link)
+   
 
-    
     
     
