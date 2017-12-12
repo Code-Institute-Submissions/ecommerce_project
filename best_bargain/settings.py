@@ -153,6 +153,7 @@ if USE_S3:
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
 
 
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'

@@ -22,7 +22,7 @@ def do_search(request):
     return render(request, 'viewproducts.html', {'products': products})
     
 def get_index(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:2]
     return render(request, 'index.html', {'posts': posts})
     
 def show_category(request,hierarchy= None):
