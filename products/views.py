@@ -8,7 +8,7 @@ from django.utils import timezone
 def viewproducts(request):
     products = Product.objects.get_queryset().order_by('id')
     page = request.GET.get('page', 1)
-    paginator = Paginator(products, 8)
+    paginator = Paginator(products, 64)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:
@@ -29,6 +29,7 @@ def show_category(request,hierarchy= None):
     category_slug = hierarchy.split('/')
     parent = None
     root = Category.objects.all()
+    
 
     for slug in category_slug[:-1]:
         parent = root.get(parent=parent, slug = slug)
@@ -43,7 +44,7 @@ def show_category(request,hierarchy= None):
     
 def selected_product(request, id):
     product = Product.objects.get(pk=id)
-    link = product.aw_deep_link
+    link = product.merchant_deep_link
     viewed = request.session.get('viewed', {})
     
     viewed[id] = viewed.get(id)

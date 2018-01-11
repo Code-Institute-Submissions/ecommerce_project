@@ -10,24 +10,22 @@ class Product(models.Model):
     product_name = models.CharField(max_length=254, default='')
     search_price = models.DecimalField(max_digits=6, decimal_places=2)
     aw_image_url = models.CharField(max_length=500, default='')
-    aw_deep_link = models.CharField(max_length=500, default='')
-    merchant_category = models.CharField(max_length=500, default='')
-    # category_name = models.CharField(max_length=500, default='')
-    
-    slug = models.SlugField(default='')
+    merchant_deep_link = models.CharField(max_length=500, default='')
+    slug = models.SlugField(default='product')
     
     def __str__(self):
         return self.product_name
         
 class Category(MPTTModel):
 	name = models.CharField(max_length=50, unique=True)
-	parent = TreeManyToManyField('self', null=True, blank=True, related_name='children', db_index=True)
+	parent = TreeForeignKey('self', null=True, blank=True, related_name='children', db_index=True)
 	slug = models.SlugField()
 	
 	class MPTTMeta:
 		order_insertion_by = ['name']
 
 	class Meta:
+		unique_together = (('parent', 'slug',))
 		verbose_name_plural = 'categories'
 		
 	def get_slug_list(self):

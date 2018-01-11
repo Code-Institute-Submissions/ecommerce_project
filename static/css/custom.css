@@ -427,6 +427,10 @@ a:hover, a:focus {
 
 /**********************************BASE************************************/
 
+.form-control {
+    width: 50%;
+}
+
 .navbar-nav {
    margin-right: -15px;
 }

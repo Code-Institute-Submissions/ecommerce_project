@@ -21,12 +21,13 @@ class Command(BaseCommand):
                     fields = line.split(',')
                     
                     data = {
-                        'product_name': fields[1],
-                        'search_price': fields[3],
-                        'aw_image_url': fields[5],
-                        'aw_deep_link': fields[0],
-                        'merchant_category': fields[2],
-                        'category_name': fields[4],
+                        'product_name': fields[0],
+                        'search_price': fields[2],
+                        'aw_image_url': fields[3],
+                        'merchant_deep_link': fields[4],
+                        
+                        
+                        
                     }
 
                     product = Product(**data)
