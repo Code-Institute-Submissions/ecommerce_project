@@ -6,6 +6,7 @@
 {% block content %}
 <br>
 <div class="text-center" style="text-transform:capitalize"><h1>{{instance.name}}</h1></div>
+
 <hr>
 <div class="container text-center">
 {% if  instance.children.all %}
@@ -23,7 +24,7 @@
     {% if  instance.product_set.all %}
  {% for i in instance.product_set.all %}
     <div class="col-xs-12 col-sm-6 col-md-3">
-        <a href="{{ i.aw_deep_link }}">
+        <a href="{% url 'selected_product' i.id %}" target="_blank">
         <div class="card text-center">
             <div class="bb-product-img-container">
                 <img class="card-img-top" src="{{ i.aw_image_url }}">
