@@ -43,33 +43,33 @@
   <hr>
   <div class="row">
     <div class="col-xs-12 col-sm-4 ">
-      <a href="#">
+      <a href="{% url 'category' 'girls/girls-accessories/girls-bags' %}">
       <div class="bb-hovereffect">
         <img class="img-responsive" src="media/images/womens bags.jpg" alt="">
             <div class="overlay">
-                <h2>WOMENS BAGS</h2>
+                <h2>GIRLS BAGS</h2>
         				<p>SHOP NOW</p>
             </div>
     </div>
     </a>
     </div>
-    <div class="col-xs-12 col-sm-4 ">
-      <a href="#">
+    <div class="col-xs-12 col-sm-4 bb-collection-img">
+      <a href="{% url 'category' 'mens/mens-clothes' %}">
       <div class="bb-hovereffect">
         <img class="img-responsive" src="media/images/mens suits.jpg" alt="">
             <div class="overlay">
-                <h2>MENS SUITS</h2>
+                <h2>MENS CLOTHES</h2>
         				<p>SHOP NOW</p>
             </div>
     </div>
     </a>
     </div>
-     <div class="col-xs-12 col-sm-4 ">
-      <a href="#">
+     <div class="col-xs-12 col-sm-4 bb-collection-img">
+      <a href="{% url 'category' 'womens/womens-clothes/womens-tops' %}">
       <div class="bb-hovereffect">
         <img class="img-responsive" src="media/images/womens jeans.jpg" alt="">
             <div class="overlay">
-                <h2>WOMENS JEANS</h2>
+                <h2>WOMENS TOPS</h2>
         				<p>SHOP NOW</p>
             </div>
     </div>
@@ -108,7 +108,7 @@
 
 
 <div class="container bb-blogpost-container" style="margin-top:50px;margin-bottom:75px;">
-    <h1 class="text-center">HOT ARTICLES</h1>
+    <h1 class="text-center">TOP POSTS</h1>
     <hr>
     <div class="row">
     {% for post in posts %}

@@ -279,9 +279,9 @@ a:hover, a:focus {
   margin-bottom: 70px;
 }
 
-
-
-
+.bb-collection-img {
+  margin-top: 50px;
+}
 
 
 /**********************************VIEWPRODUCTS************************************/
@@ -588,6 +588,7 @@ a:hover, a:focus {
 .bb-brand-img {
   max-width: 180px;
 }
+
 
 /**********************************BLOG************************************/
 
