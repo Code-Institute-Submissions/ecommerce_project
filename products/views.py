@@ -8,7 +8,7 @@ from django.utils import timezone
 def viewproducts(request):
     products = Product.objects.get_queryset().order_by('id')
     page = request.GET.get('page', 1)
-    paginator = Paginator(products, 64)
+    paginator = Paginator(products, 8)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:

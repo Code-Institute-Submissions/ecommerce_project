@@ -5,7 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def do_search(request):
     products = Product.objects.filter(product_name__icontains=request.GET['q'])
     page = request.GET.get('page', 1)
-    paginator = Paginator(products, 8)
+    paginator = Paginator(products, 64)
     try:
         products = paginator.page(page)
     except PageNotAnInteger:

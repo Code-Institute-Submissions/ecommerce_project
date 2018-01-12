@@ -48,44 +48,44 @@
 				<ul class="dropdown-menu mega-dropdown-menu">
 					<li class="col-sm-12">
 						<ul>
-							<li class="dropdown-header text-center"><a href="{% url 'viewproducts' %}">VIEW ALL MENS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+							<li class="dropdown-header text-center"><a href="{% url 'category' 'mens' %}">VIEW ALL MENS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
                             <li class="divider text-center"></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">FOOTWEAR</li>
-							<li><a href="#">Trainers</a></li>
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Footwear</a></li>
-							<li><a href="#">Runners</a></li>
+							<li><a href="{% url 'category' 'mens/mens-footwear/mens-trainers' %}">Trainers</a></li>
+                            <li><a href="{% url 'category' 'mens/mens-footwear/mens-shoes' %}">Shoes</a></li>
+                            <li><a href="{% url 'category' 'mens/mens-footwear/men-footwear' %}">Footwear</a></li>
+							<li><a href="{% url 'category' 'mens/mens-footwear/mens-runners' %}">Runners</a></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">CLOTHES</li>
-							<li><a href="#">Tops</a></li>
-							<li><a href="#">Jumpers</a></li>
-							<li><a href="#">Sweatshirts</a></li>                            
-							<li><a href="#">Hoodies</a></li>							
+							<li><a href="{% url 'category' 'mens/mens-clothes/mens-tops' %}">Tops</a></li>
+							<li><a href="{% url 'category' 'mens/mens-clothes/mens-jumpers' %}">Jumpers</a></li>
+							<li><a href="{% url 'category' 'mens/mens-clothes/mens-sweatshirts' %}">Sweatshirts</a></li>                            
+							<li><a href="{% url 'category' 'mens/mens-clothes/mens-hoodies' %}">Hoodies</a></li>							
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">ACCESSORIES</li>
-                            <li><a href="#">Backpacks</a></li>
-							<li><a href="#">Overnight Bags</a></li>
-							<li><a href="#">Bags</a></li>
-							<li><a href="#">Evening Bags</a></li>                         
+                            <li><a href="{% url 'category' 'mens/mens-accessories/mens-backpacks' %}">Backpacks</a></li>
+							<li><a href="{% url 'category' 'mens/mens-accessories/mens-overnight-bags' %}">Overnight Bags</a></li>
+							<li><a href="{% url 'category' 'mens/mens-accessories/mens-bags' %}">Bags</a></li>
+							<li><a href="{% url 'category' 'mens/mens-accessories/mens-evening-bags' %}">Evening Bags</a></li>                         
 						</ul>
 					</li>
 						<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">SPORTSWEAR</li>
-                            <li><a href="#">Football</a></li>
-							<li><a href="#">Basketball</a></li>
-							<li><a href="#">Tennis</a></li>
-							<li><a href="#">Running</a></li>                         
+                            <li><a href="{% url 'category' 'mens/mens-sportswear/mens-football' %}">Football</a></li>
+							<li><a href="{% url 'category' 'mens/mens-sportswear/mens-basketball' %}">Basketball</a></li>
+							<li><a href="{% url 'category' 'mens/mens-sportswear/mens-tennis' %}">Tennis</a></li>
+							<li><a href="{% url 'category' 'mens/mens-sportswear/mens-running' %}">Running</a></li>                         
 						</ul>
 					</li>
 				</ul>				
@@ -96,44 +96,44 @@
 				<ul class="dropdown-menu mega-dropdown-menu">
 					<li class="col-sm-12">
 						<ul>
-							<li class="dropdown-header text-center"><a href="#">VIEW ALL WOMENS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+							<li class="dropdown-header text-center"><a href="{% url 'category' 'womens' %}">VIEW ALL WOMENS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
                             <li class="divider text-center"></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">FOOTWEAR</li>
-							<li><a href="#">Trainers</a></li>
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Footwear</a></li>
-							<li><a href="#">Runners</a></li>
+							<li><a href="{% url 'category' 'womens/womens-footwear/womens-trainers' %}">Trainers</a></li>
+                            <li><a href="{% url 'category' 'womens/womens-footwear/womens-shoes' %}">Shoes</a></li>
+                            <li><a href="{% url 'category' 'womens/womens-footwear/women-footwear' %}">Footwear</a></li>
+							<li><a href="{% url 'category' 'womens/womens-footwear/womens-runners' %}">Runners</a></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">CLOTHES</li>
-							<li><a href="#">Tops</a></li>
-							<li><a href="#">Jumpers</a></li>
-							<li><a href="#">Sweatshirts</a></li>                            
-							<li><a href="#">Hoodies</a></li>							
+							<li><a href="{% url 'category' 'womens/womens-clothes/womens-tops' %}">Tops</a></li>
+							<li><a href="{% url 'category' 'womens/womens-clothes/womens-jumpers' %}">Jumpers</a></li>
+							<li><a href="{% url 'category' 'womens/womens-clothes/womens-sweatshirts' %}">Sweatshirts</a></li>                            
+							<li><a href="{% url 'category' 'womens/womens-clothes/womens-hoodies' %}">Hoodies</a></li>							
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">ACCESSORIES</li>
-                            <li><a href="#">Backpacks</a></li>
-							<li><a href="#">Overnight Bags</a></li>
-							<li><a href="#">Bags</a></li>
-							<li><a href="#">Evening Bags</a></li>                         
+                            <li><a href="{% url 'category' 'womens/womens-accessories/womens-backpacks' %}">Backpacks</a></li>
+							<li><a href="{% url 'category' 'womens/womens-accessories/womens-overnight-bags' %}">Overnight Bags</a></li>
+							<li><a href="{% url 'category' 'womens/womens-accessories/womens-bags' %}">Bags</a></li>
+							<li><a href="{% url 'category' 'womens/womens-accessories/womens-evening-bags' %}">Evening Bags</a></li>                         
 						</ul>
 					</li>
 						<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">SPORTSWEAR</li>
-                            <li><a href="#">Football</a></li>
-							<li><a href="#">Basketball</a></li>
-							<li><a href="#">Tennis</a></li>
-							<li><a href="#">Running</a></li>                         
+                            <li><a href="{% url 'category' 'womens/womens-sportswear/womens-football' %}">Football</a></li>
+							<li><a href="{% url 'category' 'womens/womens-sportswear/womens-basketball' %}">Basketball</a></li>
+							<li><a href="{% url 'category' 'womens/womens-sportswear/womens-tennis' %}">Tennis</a></li>
+							<li><a href="{% url 'category' 'womens/womens-sportswear/womens-running' %}">Running</a></li>                         
 						</ul>
 					</li>
 				</ul>				
@@ -144,44 +144,44 @@
 				<ul class="dropdown-menu mega-dropdown-menu">
 					<li class="col-sm-12">
 						<ul>
-							<li class="dropdown-header text-center"><a href="#">VIEW ALL BOYS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+							<li class="dropdown-header text-center"><a href="{% url 'category' 'boys' %}">VIEW ALL BOYS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
                             <li class="divider text-center"></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">FOOTWEAR</li>
-							<li><a href="#">Trainers</a></li>
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Footwear</a></li>
-							<li><a href="#">Runners</a></li>
+							<li><a href="{% url 'category' 'boys/boys-footwear/boys-trainers' %}">Trainers</a></li>
+                            <li><a href="{% url 'category' 'boys/boys-footwear/boys-shoes' %}">Shoes</a></li>
+                            <li><a href="{% url 'category' 'boys/boys-footwear/boys-footwear' %}">Footwear</a></li>
+							<li><a href="{% url 'category' 'boys/boys-footwear/boys-runners' %}">Runners</a></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">CLOTHES</li>
-							<li><a href="#">Tops</a></li>
-							<li><a href="#">Jumpers</a></li>
-							<li><a href="#">Sweatshirts</a></li>                            
-							<li><a href="#">Hoodies</a></li>							
+							<li><a href="{% url 'category' 'boys/boys-clothes/boys-tops' %}">Tops</a></li>
+							<li><a href="{% url 'category' 'boys/boys-clothes/boys-jumpers' %}">Jumpers</a></li>
+							<li><a href="{% url 'category' 'boys/boys-clothes/boys-sweatshirts' %}">Sweatshirts</a></li>                            
+							<li><a href="{% url 'category' 'boys/boys-clothes/boys-hoodies' %}">Hoodies</a></li>							
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">ACCESSORIES</li>
-                            <li><a href="#">Backpacks</a></li>
-							<li><a href="#">Overnight Bags</a></li>
-							<li><a href="#">Bags</a></li>
-							<li><a href="#">Evening Bags</a></li>                         
+                            <li><a href="{% url 'category' 'boys/boys-accessories/boys-backpacks' %}">Backpacks</a></li>
+							<li><a href="{% url 'category' 'boys/boys-accessories/boys-overnight-bags' %}">Overnight Bags</a></li>
+							<li><a href="{% url 'category' 'boys/boys-accessories/boys-bags' %}">Bags</a></li>
+							<li><a href="{% url 'category' 'boys/boys-accessories/boys-evening-bags' %}">Evening Bags</a></li>                         
 						</ul>
 					</li>
 						<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">SPORTSWEAR</li>
-                            <li><a href="#">Football</a></li>
-							<li><a href="#">Basketball</a></li>
-							<li><a href="#">Tennis</a></li>
-							<li><a href="#">Running</a></li>                         
+                            <li><a href="{% url 'category' 'boys/boys-sportswear/boys-football' %}">Football</a></li>
+							<li><a href="{% url 'category' 'boys/boys-sportswear/boys-basketball' %}">Basketball</a></li>
+							<li><a href="{% url 'category' 'boys/boys-sportswear/boys-tennis' %}">Tennis</a></li>
+							<li><a href="{% url 'category' 'boys/boys-sportswear/boys-running' %}">Running</a></li>                         
 						</ul>
 					</li>
 				</ul>				
@@ -192,44 +192,44 @@
 				<ul class="dropdown-menu mega-dropdown-menu">
 					<li class="col-sm-12">
 						<ul>
-							<li class="dropdown-header text-center"><a href="#">VIEW ALL GIRLS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
+							<li class="dropdown-header text-center"><a href="{% url 'category' 'girls' %}">VIEW ALL GIRLS<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>                            
                             <li class="divider text-center"></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">FOOTWEAR</li>
-							<li><a href="#">Trainers</a></li>
-                            <li><a href="#">Shoes</a></li>
-                            <li><a href="#">Footwear</a></li>
-							<li><a href="#">Runners</a></li>
+							<li><a href="{% url 'category' 'girls/girls-footwear/girls-trainers' %}">Trainers</a></li>
+                            <li><a href="{% url 'category' 'girls/girls-footwear/girls-shoes' %}">Shoes</a></li>
+                            <li><a href="{% url 'category' 'girls/girls-footwear/girl-footwear' %}">Footwear</a></li>
+							<li><a href="{% url 'category' 'girls/girls-footwear/girls-runners' %}">Runners</a></li>
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">CLOTHES</li>
-							<li><a href="#">Tops</a></li>
-							<li><a href="#">Jumpers</a></li>
-							<li><a href="#">Sweatshirts</a></li>                            
-							<li><a href="#">Hoodies</a></li>							
+							<li><a href="{% url 'category' 'girls/girls-clothes/girls-tops' %}">Tops</a></li>
+							<li><a href="{% url 'category' 'girls/girls-clothes/girls-jumpers' %}">Jumpers</a></li>
+							<li><a href="{% url 'category' 'girls/girls-clothes/girls-sweatshirts' %}">Sweatshirts</a></li>                            
+							<li><a href="{% url 'category' 'girls/girls-clothes/girls-hoodies' %}">Hoodies</a></li>							
 						</ul>
 					</li>
 					<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">ACCESSORIES</li>
-                            <li><a href="#">Backpacks</a></li>
-							<li><a href="#">Overnight Bags</a></li>
-							<li><a href="#">Bags</a></li>
-							<li><a href="#">Evening Bags</a></li>                         
+                            <li><a href="{% url 'category' 'girls/girls-accessories/girls-backpacks' %}">Backpacks</a></li>
+							<li><a href="{% url 'category' 'girls/girls-accessories/girls-overnight-bags' %}">Overnight Bags</a></li>
+							<li><a href="{% url 'category' 'girls/girls-accessories/girls-bags' %}">Bags</a></li>
+							<li><a href="{% url 'category' 'girls/girls-accessories/girls-evening-bags' %}">Evening Bags</a></li>                         
 						</ul>
 					</li>
 						<li class="col-sm-3">
 						<ul>
 							<li class="dropdown-header">SPORTSWEAR</li>
-                            <li><a href="#">Football</a></li>
-							<li><a href="#">Basketball</a></li>
-							<li><a href="#">Tennis</a></li>
-							<li><a href="#">Running</a></li>                         
+                            <li><a href="{% url 'category' 'girls/girls-sportswear/girls-football' %}">Football</a></li>
+							<li><a href="{% url 'category' 'girls/girls-accessories/girls-basketball' %}">Basketball</a></li>
+							<li><a href="{% url 'category' 'girls/girls-accessories/girls-tennis' %}">Tennis</a></li>
+							<li><a href="{% url 'category' 'girls/girls-accessories/girls-running' %}">Running</a></li>                         
 						</ul>
 					</li>
 				</ul>				

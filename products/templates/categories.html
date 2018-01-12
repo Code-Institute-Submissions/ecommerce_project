@@ -5,17 +5,18 @@
 
 {% block content %}
 <br>
-<div class="text-center"><h2>{{instance.name}}</h2></div>
-
+<div class="text-center" style="text-transform:capitalize"><h1>{{instance.name}}</h1></div>
+<hr>
+<div class="container text-center">
 {% if  instance.children.all %}
-    <h4>Sub Categories</h4>
+    <h2 style="color:#2fa4e7">Sub Categories</h2>
     {% for i in instance.children.all %}
-        <a href="{{ i.slug }}"> {{ i.name }} </a><br>
+       <a href="{{ i.slug }}"> {{ i.name }} </a> <br>
     {% endfor %}
 
     <br><hr>
 {% endif %}
-
+</div>
 
 <div class="container-fluid bb-products-container">
 <div class="row">
