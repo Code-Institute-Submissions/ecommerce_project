@@ -16,8 +16,7 @@ def viewproducts(request):
     except EmptyPage:
         products = paginator.page(paginator.num_pages)
     return render(request, 'viewproducts.html', {'products': products}) 
-    
-    
+
 def do_search(request):
     products = Product.objects.filter(name__icontains=request.GET['q'])
     return render(request, 'viewproducts.html', {'products': products})
