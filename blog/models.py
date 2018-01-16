@@ -37,3 +37,14 @@ class Comment(models.Model):
     def __str__(self):
         return self.title
         
+class Newsletter(models.Model):
+    full_name = models.CharField(max_length=50, blank=False)
+    email = models.EmailField(max_length=100, blank=False)
+    address_line1 = models.CharField(max_length=50, blank=False)
+    address_line2 = models.CharField(max_length=50, blank=False)
+    town_or_city = models.CharField(max_length=50, blank=False)
+    country = models.CharField(max_length=50, blank=False)
+    
+    def __str__(self):
+        return self.full_name
+        
