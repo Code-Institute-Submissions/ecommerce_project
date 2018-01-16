@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import Post, Comment
 from .forms import PostForm, CommentsForm, MakePaymentForm, NewsletterForm
 from django.utils import timezone
@@ -54,9 +54,8 @@ def newsletter(request):
                 messages.error(request, "Your card was declined!")
 
             if customer.paid:
-                messages.error(request, "You have successfully paid")
-                request.session['cart'] = {}
-                return redirect(reverse('home'))
+                messages.error(request, "You have successfully paid and subscribed to our newsletter")
+                return redirect(reverse('index'))
             else:
                 messages.error(request, "Unable to take payment")
         else:

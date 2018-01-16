@@ -25,5 +25,5 @@ class MakePaymentForm(forms.Form):
 class NewsletterForm(forms.ModelForm):
    class Meta:
        model = Newsletter
-       fields = ( 'full_name', 'email', 'address_line1', 'address_line2', 'town_or_city', 'country')   
+       fields = ( 'full_name', 'email', 'address_line_1', 'address_line_2', 'town_or_city', 'country')   
  

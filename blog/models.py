@@ -40,8 +40,8 @@ class Comment(models.Model):
 class Newsletter(models.Model):
     full_name = models.CharField(max_length=50, blank=False)
     email = models.EmailField(max_length=100, blank=False)
-    address_line1 = models.CharField(max_length=50, blank=False)
-    address_line2 = models.CharField(max_length=50, blank=False)
+    address_line_1 = models.CharField(max_length=50, blank=False)
+    address_line_2 = models.CharField(max_length=50, blank=False)
     town_or_city = models.CharField(max_length=50, blank=False)
     country = models.CharField(max_length=50, blank=False)
     
