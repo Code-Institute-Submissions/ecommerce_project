@@ -589,6 +589,9 @@ a:hover, a:focus {
   max-width: 180px;
 }
 
+.bb-collection-img {
+  margin-top: 0px;
+}
 
 /**********************************BLOG************************************/
 

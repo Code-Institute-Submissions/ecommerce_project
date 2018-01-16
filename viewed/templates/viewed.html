@@ -20,7 +20,7 @@
                     <td><img class="bb-viewed-img" src="{{ item.product.aw_image_url }}"></td>
                     <td>{{ item.product.product_name }}</td>
                     <td>{{ item.product.search_price }}</td>
-                    <td><a class="btn bb-form-btn" src="{{ item.product.aw_deep_link }}">VIEW</a></td>
+                    <td><a class="btn bb-form-btn" href="{{ item.product.merchant_deep_link }}">VIEW</a></td>
             </tr>
         {% endfor %}
         

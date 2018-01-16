@@ -11,19 +11,19 @@
         <div class="item active">
             <img src="media/images/mens clothes.jpg" alt="mens clothes" style="width:100%;">
             <div class="carousel-caption bb-caption d-none d-md-block">
-                <button class="btn bb-carousel-btn">SHOP MENS</button>
+                <a href="{% url 'category' 'mens' %}" style="color:white" class="btn bb-carousel-btn">SHOP MENS</a>
             </div>
         </div>
       <div class="item">
         <img src="media/images/womens clothes.jpg" alt="womens clothes" style="width:100%;">
             <div class="carousel-caption bb-caption d-none d-md-block">
-                <button class="btn bb-carousel-btn">SHOP WOMENS</button>
+                <a hred="{% url 'category' 'womens' %}" style="color:white" class="btn bb-carousel-btn">SHOP WOMENS</a>
             </div>
       </div>
       <div class="item">
         <img src="media/images/footwear.jpg" alt="footwear" style="width:100%;">
             <div class="carousel-caption bb-caption d-none d-md-block">
-                <button class="btn bb-carousel-btn">SHOP FOOTWEAR</button>
+                <a href="{% url 'category' 'womens/womens-accessories/womens-bags' %}" style="color:white" class="btn bb-carousel-btn">SHOP FOOTWEAR</a>
             </div>
       </div>
     </div>
