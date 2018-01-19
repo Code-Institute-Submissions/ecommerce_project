@@ -1,3 +1,8 @@
 from django.test import TestCase
+from .view import getposts
 
-# Create your tests here.
+class TestBlogViews(TestCase):
+    def test_get_blog_page(self):
+        page = self.client.get("/blog")
+        self.assertEqual(page.status_code, 200)
+        self.assertTemplateUsed(page, "blogposts.html")

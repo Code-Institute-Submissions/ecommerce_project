@@ -99,6 +99,8 @@ if USE_S3:
 - Postgres 
 - Django Framework
 
+##### Hosted on Heroku and Amazon S3 bucket hosts the static files 
+
 ## Apps
 
 ### accounts
@@ -118,4 +120,22 @@ The search app allows the user to input a keyword to find products rendered via 
 
 ### viewed
 Once logged in, the viewed app captures the history of a users clicked products.
+
+## Testing
+
+Django’s unit tests use a Python standard library module(unittest), it defines tests using a class-based approach.
+
+Tests were created in 3 apps:
+
+1. ##### accounts 
+- A test to check that a new user can successfully register
+- The second test to confirm the registration form fails when an email is not entered
+
+2. ##### blog
+- Testing that the correct http respose code is returned for the url and that the "blogposts.html" template is rendered
+
+3. ##### products
+- This test that the view "viewproducts" resolves
+
+To run tests, use the command ```python3 manage.py test <name of app>```
 
